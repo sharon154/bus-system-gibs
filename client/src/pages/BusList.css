@@ -1,0 +1,80 @@
+/* Modal overlay background */
+.buslist-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .buslist-modal-overlay.active {
+    display: flex;
+  }
+  
+  /* Modal container */
+  .buslist-modal-container {
+    background-color: white;
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px;
+    width: 350px; /* Reduced width */
+    max-width: 90%;
+    max-height: 400px; /* Fixed max height */
+    overflow-y: auto; /* Scrollable content */
+  }
+  
+  /* Modal header */
+  .buslist-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; /* Reduced margin */
+  }
+  
+  /* Close button */
+  .buslist-close-button {
+    background: none;
+    border: none;
+    font-size: 1.3rem; /* Reduced font size */
+    cursor: pointer;
+    color: black;
+  }
+  
+  /* Form styling */
+  .buslist-form-group {
+    margin-bottom: 10px; /* Reduced margin between fields */
+  }
+  
+  .buslist-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px; /* Reduced margin below label */
+  }
+  
+  .buslist-form-group input {
+    width: 100%;
+    padding: 6px; /* Reduced padding inside inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Reduced font size */
+  }
+  
+  /* Submit button styling */
+  .buslist-submit-button {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .buslist-submit-button:hover {
+    background-color: #0056b3;
+  }
+  

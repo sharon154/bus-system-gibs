@@ -1,0 +1,106 @@
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../src/images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* filter: blur(2px); */
+  /* Apply a shadow */
+  z-index: -1;
+  /* Ensures the pseudo-element is behind the content */
+ background-attachment: fixed;  /*Ensures the background stays fixed while scrolling */
+}
+
+
+.nav-link {
+  display: inline-block;
+  /* Ensures padding and border-radius apply correctly */
+  padding: 10px 20px;
+  /* Adjust padding as needed */
+  transition: background-color 0.1s ease, border-radius 0.1s ease;
+  /* Smooth transition effect */
+}
+
+
+.nav-link.active:hover {
+  font-size: large;
+  color: #212529;
+  /* Change text color to green on hover */
+  background-color: transparent;
+}
+
+.nav-link:hover {
+  border-radius: 15px;
+  /* Adjust to achieve desired oval shape */
+  background-color: #212529;
+  color: white;
+}
+
+.card:hover{
+  cursor: pointer;
+}
+
+.popup-overlay { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px; /* Adjusted for smaller size */
+  width: 90%;
+  max-height: 60%; /* Allow for scrolling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.popup-title {
+  text-align: center; /* Center heading */
+  margin-bottom: 10px; /* Space between title and content */
+}
+
+.popup-body {
+  max-height: 60vh; /* Set max height for scrollable area */
+  overflow-y: auto; /* Enable vertical scrolling */
+  width: 100%; /* Ensure the body takes full width */
+}
+
+.close-button {
+  margin-top: 20px; /* Add space above the button */
+  background: #007bff; /* Change to your preferred color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: #0056b3; /* Darker shade on hover */
+}
